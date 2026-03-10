@@ -103,7 +103,7 @@ def verify_request():
     except:
         return False
 
-    if abs(time.time() - timestamp) > 10:
+    if abs(time.time() - timestamp) > 30:
         return False
 
     message = f"{request.path}:{timestamp}".encode()
