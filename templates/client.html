@@ -1,0 +1,124 @@
+<!-- client.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Twidder</title>
+  <link rel="icon" type="image/jpg" href="/static/favicon.png"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+  <script src="/static/client.js"></script>
+  <link rel="stylesheet" href="/static/client.css" />
+
+  <!-- Welcome View -->
+  <script type="text/template" id="welcomeview">
+      <div class="welcome">
+
+          <div class="logo-slogan">
+            <img src="/static/wimage.png" alt="logo">
+          </div>
+
+          <div class="forms">
+              <form id="signin-form">
+                  <h2></h2>
+                  <div class="form-row">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" required>
+                  </div>
+                  <div class="form-row">
+                    <button onclick="loadPasswordRecoveryView()">Password Recovery</button>
+                    <button type="submit">Sign In</button>
+                  </div>
+                  <p class="error" id="signin-error"></p>
+              </form>
+
+              <form id="signup-form">
+                  <h2>Sign up here</h2>
+                  <div class="form-row">
+                    <label for="signup-firstname">First Name</label>
+                    <input type="text" id="signup-firstname" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-familyname">Family Name</label>
+                    <input type="text" id="signup-familyname" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-gender">Gender</label>
+                    <select id="signup-gender" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-city">City</label>
+                    <input type="text" id="signup-city" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-country">Country</label>
+                    <input type="text" id="signup-country" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                  </div>
+                  <div class="form-row">
+                    <label for="signup-repeat">Repeat PSW</label>
+                    <input type="password" id="signup-repeat" required>
+                  </div>
+                  <button type="submit">Sign Up</button>
+                  <p class="error" id="signup-error"></p>
+              </form>
+          </div>
+      </div>
+    </script>
+
+  <!-- Password recovery View -->
+  <script type="text/template" id="passwordrecoveryview">
+      <div class="welcome forms">
+
+          <form id="recovery-form">
+              <h2>Password Recovery</h2>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+              </div>
+              <button type="submit" id="recovery-btn">Get recovery link</button>
+              <p class="error" id="recovery-error"></p>
+          </form>
+
+      </div>
+  </script>
+
+  <!-- Profile View -->
+  <script type="text/template" id="profileview">
+      <div class="profile">
+
+          <div class="tabs">
+              <button onclick="showTab('home')" id="tab-home">Home</button>
+              <button onclick="showTab('browse')" id="tab-browse">Browse</button>
+              <button onclick="showTab('account')" id="tab-account">Account</button>
+          </div>
+
+          <div class="tab-content">
+              <div id="home" class="tab"></div>
+              <div id="browse" class="tab"></div>
+              <div id="account" class="tab"></div>
+          </div>
+      </div>
+    </script>
+</head>
+
+<body>
+  <div id="content"></div>
+</body>
+
+</html>

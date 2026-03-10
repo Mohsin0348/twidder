@@ -1,0 +1,145 @@
+
+.welcome {
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0 auto; /* top margin 100px, center horizontally */
+    display: flex;
+}
+
+.logo-slogan {
+    width: 340px;
+    border: 1px solid #222;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.forms {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.forms h2{
+    text-align: center;
+}
+.forms form {
+    border: 1px solid #222;
+    align-items: center;
+
+}
+form .error {
+    grid-column: 1 / -1; /* full width */
+}
+
+.forms input{
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.forms button {
+    display: block; 
+    margin-left: auto;
+    margin-right: 2px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin: 2px;
+}
+
+.form-row label {
+    width: 100px; /* fixed width for labels */
+}
+
+.form-row input {
+    flex: 1;
+}
+.form-row select {
+    flex: 1;
+    box-sizing: border-box; /* important to prevent overflow */
+}
+
+.profile {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto 0 auto; /* top margin 100px, center horizontally */
+    display: flex;
+    gap: 10px;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.td-feed {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 400px;
+    min-height: 600px;
+    padding: 10px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: flex;
+}
+
+.reload-button{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+}
+
+li {
+    padding: 5px;
+    border-top: 1px solid #eee;
+}
+li h4 {
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+li p {
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+.user-info {
+    padding-left: 10px;
+
+}
+.user-info h3, .user-info p {
+    margin: 10px 0px;
+}
+.browse-user-info h3, .browse-user-info p {
+    margin: 5px 0px;
+}
+.post-input {
+    width: 99%;
+    resize: none;           /* prevent manual resize */
+    overflow: hidden;       /* no scrollbar */
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end; /* moves button to right */
+    padding-bottom: 10px;
+}
+
+.browse-content .form-row {
+    gap: 5px;
+}
+.sign-out-btn {
+    float: right;
+}
