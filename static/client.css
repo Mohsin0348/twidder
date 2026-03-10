@@ -120,9 +120,6 @@ li p {
 
 }
 .user-info h3, .user-info p {
-    margin: 10px 0px;
-}
-.browse-user-info h3, .browse-user-info p {
     margin: 5px 0px;
 }
 .post-input {
