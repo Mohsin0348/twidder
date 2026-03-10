@@ -105,7 +105,8 @@ async function secureHeaders(path) {
 /* ----------WebSocket---------- */
 
 function connectWebSocket(token) {
-    socket = new WebSocket("ws://" + window.location.host + "/ws?token=" + token);
+    const protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+    socket = new WebSocket(protocol + window.location.host + "/ws?token=" + token);    
 
     socket.onmessage = function (event) {
         if (event.data === "logout") {
