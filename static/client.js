@@ -35,7 +35,6 @@ function removeUserData() {
 async function getAddress(lat, lon) {
     if (!lat || !lon) return "";
     try {
-        return `Lat: ${lat}, Lon:${lon}`;
         const res = await fetch(`https://geocode.xyz/${lat},${lon}?geoit=json`);
         const data = await res.json();
         if (data.distance == "Throttled! See geocode.xyz/pricing"){
